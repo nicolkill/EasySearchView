@@ -1,14 +1,23 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+ext {
+    PUBLISH_GROUP_ID = 'com.nicolkill'
+    PUBLISH_ARTIFACT_ID = 'easysearchview'
+    PUBLISH_VERSION = '1.0.0'
+}
+
+group = PUBLISH_GROUP_ID
+version = PUBLISH_VERSION
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
     defaultConfig {
-        applicationId "com.nicolkill.easysearchviewexample"
         minSdkVersion 9
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName PUBLISH_VERSION
     }
     buildTypes {
         release {
@@ -24,12 +33,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-
-    compile 'com.nicolkill:superrecyclerview:1.0.1'
-
-    compile project(':easysearchview')
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

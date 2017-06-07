@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="30dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:gravity="center"
+    android:clickable="false"
+    android:background="@drawable/search_background">
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="@color/gray"
+        android:clickable="false"
+        android:src="@drawable/ic_search"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/search_autocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dropDownVerticalOffset="14dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:clickable="false"
+        android:maxLines="1"
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:background="@color/textColorPrimary"
+        android:hint="@string/search_message"
+        android:layout_below="@+id/register_message" />
+
+</LinearLayout>
